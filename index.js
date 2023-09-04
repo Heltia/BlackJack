@@ -13,12 +13,16 @@ let ValorExtra =  Math.floor(Math.random() * valores.length + 1);
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("cardOne").innerHTML = valorUm;
     document.getElementById("cardTwo").innerHTML = valorDois;
+    document.getElementById("somamao").innerHTML += " " + (valorUm + valorDois) + "!";
 });
 
 
 let total = 0;
 
 let startHand = total + valorUm + valorDois;
+
+
+
 
 
 

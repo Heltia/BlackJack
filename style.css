@@ -1,4 +1,4 @@
-#blackjack {
+.cards {
     display: flex;
     justify-content: center;
 }
@@ -10,6 +10,12 @@
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     align-items: center
+}
+
+.mao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card p {
