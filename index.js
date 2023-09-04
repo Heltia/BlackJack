@@ -33,24 +33,25 @@ if (somamao === 21) {
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("cardOne").innerHTML = valorUm;
     document.getElementById("cardTwo").innerHTML = valorDois;
-    document.getElementById("somamao").innerHTML += " " + (somamao) + "!";
+    document.getElementById("somamao").innerHTML = "Tens: " + (somamao) + "!";
 });
 
 
 let total = 0;
 
 let startHand = total + valorUm + valorDois;
-
+//continuar aqui a definir função de adicionar carta em click
 function pedirCarta() {
     let ValorExtra =  Math.floor(Math.random() * valores.length + 1);
-    let somamao = (valorUm + valorDois + ValorExtra);
+    let total = (startHand + ValorExtra) 
+    let somamao = (total + ValorExtra);
 
 if (somamao === 21) {
     somamao = "blackjack!!!";
 
 }
-    document.getElementById("somamao").innerHTML += " " + (somamao) + "!";
-    document.getElementById("extracard").innerHTML += '<div class="cards"><p id="cardOne">' + ValorExtra + '</p></div>';
+    document.getElementById("somamao").innerHTML = "Tens: " + (somamao) + "!";
+    document.getElementById("extracard").innerHTML += '<div class="card"><p>' + ValorExtra + '</p></div>';
 }
 
 document.addEventListener("DOMContentLoaded", function() {
