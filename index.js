@@ -50,7 +50,7 @@ if (somamao === 21) {
 
 }
     document.getElementById("somamao").innerHTML += " " + (somamao) + "!";
-    document.getElementById("extracard").innerHTML += '<div class="card"><p id="cardOne">' + ValorExtra + '</p></div>';
+    document.getElementById("extracard").innerHTML += '<div class="cards"><p id="cardOne">' + ValorExtra + '</p></div>';
 }
 
 document.addEventListener("DOMContentLoaded", function() {
