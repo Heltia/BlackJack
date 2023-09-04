@@ -10,8 +10,11 @@ let ValorExtra =  Math.floor(Math.random() * valores.length + 1);
 
 
 
-let element = document.getElementById('cardOne');
-element.id('cardOne') = "valorUm";
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("cardOne").innerHTML = valorUm;
+    document.getElementById("cardTwo").innerHTML = valorDois;
+});
+
 
 let total = 0;
 
