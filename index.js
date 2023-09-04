@@ -8,12 +8,22 @@ let valorDois = Math.floor(Math.random() * valores.length + 1);
 
 let ValorExtra =  Math.floor(Math.random() * valores.length + 1);
 
+let somamao = (valorUm + valorDois);
+
+if (somamao === 22) {
+    somamao = 21;
+}
+
+if (somamao === 21) {
+    somamao = "blackjack!!!";
+
+}
 
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("cardOne").innerHTML = valorUm;
     document.getElementById("cardTwo").innerHTML = valorDois;
-    document.getElementById("somamao").innerHTML += " " + (valorUm + valorDois) + "!";
+    document.getElementById("somamao").innerHTML += " " + (somamao) + "!";
 });
 
 
