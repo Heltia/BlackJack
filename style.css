@@ -1,0 +1,17 @@
+#blackjack {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    width: 100px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    align-items: center
+}
+
+.card p {
+    margin: auto;
+}

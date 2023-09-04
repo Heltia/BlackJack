@@ -8,7 +8,10 @@ let valorDois = Math.floor(Math.random() * valores.length + 1);
 
 let ValorExtra =  Math.floor(Math.random() * valores.length + 1);
 
-element.id() = "newId";
+
+
+let element = document.getElementById('cardOne');
+element.id('cardOne') = "valorUm";
 
 let total = 0;
 
@@ -17,29 +20,11 @@ let startHand = total + valorUm + valorDois;
 
 
 
-function game() {
-    if (startHand === 21) {
-        return valorUm + " " + valorDois + " Blackjack!!";
-    }while (startHand < 21) {
-        total = ValorExtra + valorUm + valorDois
-        return total + " " + ValorExtra + " Pedir carta";
-    }
-}
-
-if (userPrompt === 1) {
-    alert(game());
-} else {
-    console.log(game())
-}
-
-console.log(game())
-
-
-
-
-
-
-
-
-
-console.log(inicio())
+//function game() {
+//    if (startHand === 21) {
+//        return valorUm + " " + valorDois + " Blackjack!!";
+//    }while (startHand < 21) {
+//        total = ValorExtra + valorUm + valorDois
+//        return total + " " + ValorExtra + " Pedir carta";
+//    }
+// }
