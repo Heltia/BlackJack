@@ -2,11 +2,21 @@ let ACE=[1, 11]
 
 const valores=[...ACE, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+let ACE2=[1, 11]
+
+if (valores === 1) {
+    ACE2 = 11;
+} else if (valores === 11) {
+    ACE2 = 1;
+}
+
+const valores2=[...ACE2, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 let valorUm = Math.floor(Math.random() * valores.length + 1);
+
 
 let valorDois = Math.floor(Math.random() * valores.length + 1);
 
-let ValorExtra =  Math.floor(Math.random() * valores.length + 1);
 
 let somamao = (valorUm + valorDois);
 
@@ -31,17 +41,20 @@ let total = 0;
 
 let startHand = total + valorUm + valorDois;
 
+function pedirCarta() {
+    let ValorExtra =  Math.floor(Math.random() * valores.length + 1);
+    let somamao = (valorUm + valorDois + ValorExtra);
 
+if (somamao === 21) {
+    somamao = "blackjack!!!";
 
+}
+    document.getElementById("somamao").innerHTML += " " + (somamao) + "!";
+    document.getElementById("extracard").innerHTML += '<div class="card"><p id="cardOne">' + ValorExtra + '</p></div>';
+}
 
+document.addEventListener("DOMContentLoaded", function() {
+    var button = document.getElementById("pedir");
+    button.addEventListener('click', pedirCarta);
+});
 
-
-
-//function game() {
-//    if (startHand === 21) {
-//        return valorUm + " " + valorDois + " Blackjack!!";
-//    }while (startHand < 21) {
-//        total = ValorExtra + valorUm + valorDois
-//        return total + " " + ValorExtra + " Pedir carta";
-//    }
-// }
