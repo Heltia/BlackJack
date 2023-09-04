@@ -8,13 +8,14 @@ let valorDois = Math.floor(Math.random() * valores.length + 1);
 
 let ValorExtra =  Math.floor(Math.random() * valores.length + 1);
 
+element.id() = "newId";
+
 let total = 0;
 
 let startHand = total + valorUm + valorDois;
 
-let userPrompt = Number(window.prompt("começar? carregue 1", ""));
 
-let userPrompt2 = Number(window.prompt("pedir outra carta?", ""));
+
 
 function game() {
     if (startHand === 21) {
@@ -32,6 +33,8 @@ if (userPrompt === 1) {
 }
 
 console.log(game())
+
+
 
 
 
