@@ -20,6 +20,8 @@ let valorDois = Math.floor(Math.random() * valores.length + 1);
 
 let somamao = (valorUm + valorDois);
 
+let button = document.getElementById("pedir");
+
 if (somamao === 22) {
     somamao = 21;
 }
@@ -43,15 +45,27 @@ let startHand = total + valorUm + valorDois;
 //continuar aqui a definir função de adicionar carta em click
 function pedirCarta() {
     let ValorExtra =  Math.floor(Math.random() * valores.length + 1);
-    let total = (startHand + ValorExtra) 
-    let somamao = (total + ValorExtra);
+    startHand += ValorExtra; // Update startHand by adding ValorExtra
+    let somamao = startHand; // Now somamao will hold the accumulated total
 
 if (somamao === 21) {
     somamao = "blackjack!!!";
-
 }
-    document.getElementById("somamao").innerHTML = "Tens: " + (somamao) + "!";
+else if (somamao > 21) {
+    document.getElementById("somamao").innerHTML = "Tens: " + (somamao) + "Perdeste :(";
+    document.getElementById("pedir").innerHTML = 'Jogar outra vez';
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("pedir").id = "Repetir";
+        document.getElementById("Repetir").addEventListener("click", function() {
+          location.reload();
+        });
+      });
+  }
+  document.getElementById("pedir").addEventListener("click", function() {
+    location.reload();
+  });
     document.getElementById("extracard").innerHTML += '<div class="card"><p>' + ValorExtra + '</p></div>';
+    document.getElementById("somamao").innerHTML = "Tens: " + (somamao) + "!";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
